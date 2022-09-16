@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARC Dekorasyon | Ankara Dekorasyon</title>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/image-default/logo.png" />
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="https://madsparrow.me/emily/assets/css/plugins.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="ms-main-container">
+      <!-- Preloader -->
+      <div class="ms-preloader"></div>
+      <!-- Header -->
+      <header class="ms-header navbar-white">
+        <nav class="ms-nav">
+          <div class="ms-logo">
+            <a href="/" data-type="page-transition">
+              <div class="logo-light "><img src="/media/image-default/ARC LOGO.png" alt="logo image"></div>
+              <div class="logo-dark current"><img src="/media/image-default/ARC LLOGO 2.png" alt="logo image"></div>
+            </a>
+          </div>
+          <button class="hamburger" type="button" data-toggle="navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-label">MENÜ</span>
+            <span class="hamburger-inner"></span>
+          </span>
+          </button>
+          <div class="height-full-viewport">
+            <ul class="ms-navbar">
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/" data-type="page-transition">
+                  <span class="ms-btn">ANA SAYFA</span>
+                  <span class="nav-item__label">Ana sayfaya dön</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/about-us" data-type="page-transition">
+                  <span class="ms-btn">KURUMSAL</span>
+                  <span class="nav-item__label">Hakkımızda daha fazla</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/services" data-type="page-transition">
+                  <span class="ms-btn">HİZMETLER</span>
+                  <span class="nav-item__label">Neler yapıyoruz?</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/gallery" data-type="page-transition">
+                  <span class="ms-btn">GALERİ</span>
+                  <span class="nav-item__label">Çalışmalarımızı görüntüle</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/contact-us" data-type="page-transition">
+                  <span class="ms-btn">İLETİŞİM</span>
+                  <span class="nav-item__label">Hemen ulaşın</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      
+      <section class="banner">
+        <div class="banners js-bottom">
+          <div id="verticle"></div>
+          <h2>GALERİ</h2>
+        </div>
+
+      </section>
+      <section class="gallery-sec">
+        
+        <div class="cd-slider">
+   
+          <div class="main_cards">
+            <div class="card">
+              <div class="bg" style="background-image: url(/media/image-default/about.webp)"></div>
+              <div class="info">
+                <h1>GALERİ</h1>
+                <div class="gallery">
+                  {% for resim in Galeri %}
+                  <img src="{{resim.resim.url}}" alt="" />
+                  {% endfor %}
+
+                </div>
+              </div>
+    </div>
+            <div class="card">
+              <div class="bg" style="background-image: url(/media/image-default/salongaleri.webp)"></div>
+              <div class="info">
+                <h1>SALON</h1>
+                <div class="gallery">
+                  {% for resim in Salon %}
+                  <img src="{{resim.resim.url}}" alt="" />
+                  {% endfor %}
+                </div>
+              </div>
+    </div>
+            <div class="card">
+              <div class="bg" style="background-image: url(/media/image-default/mutfak\ 2.webp)"></div>
+              <div class="info">
+                <h1>MUTFAK</h1>
+                <div class="gallery">
+                  {% for resim in Mutfak%}
+                  <img src="{{resim.resim.url}}" alt="" />
+                  {% endfor %}
+                  
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="bg" style="background-image: url(/media/image-default/banyo\ 2.webp)"></div>
+              <div class="info">
+                <h1>BANYO</h1>
+                <div class="gallery">
+                  {% for resim in Banyo%}
+                  <img src="{{resim.resim.url}}" alt="" />
+                  {% endfor %}
+                  
+                </div>
+              </div>
+    </div>
+          <div class="card">
+              <div class="bg" style="background-image: url(/media/image-default/koridor.webp)"></div>
+              <div class="info">
+                <h1>KORİDOR</h1>
+                <div class="gallery">
+                  {% for resim in Koridor%}
+                  <img src="{{resim.resim.url}}" alt="" />
+                  {% endfor %}
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="bg" style="background-image: url(/media/image-default/ofis3.webp)"></div>
+              <div class="info">
+                <h1>OFİS</h1>
+                <div class="gallery">
+                  {% for resim in Ofis%}
+                  <img src="{{resim.resim.url}}" alt="" />
+                  {% endfor %}
+                  
+                  
+                </div>
+              </div>
+           </div>
+          </div>
+    
+          <nav class="cities">
+            <a href="#">GALERİ</a>
+            <a href="#">SALON</a>
+            <a href="#">MUTFAK</a>
+            <a href="#">BANYO</a>
+            <a href="#">KORİDOR</a>
+            <a href="#">OFİS</a>
+        </nav>
+        <nav class="numbers"><ul></ul></nav>
+        <nav class="dots"></nav>
+      </div>
+      </section>
+
+
+      <footer class="footer" style="margin-top: 130px;">
+        <div class="footer__addr">
+          <img src="/media/image-default/ARC LLOGO 2.png" alt="">
+          <p style="font-size:1.125rem;">A kalite malzemelerle ve birinci sınıf işçilikle yapılan tüm işler farkını ilk bakışta ortaya koyar. Hemen ulaşın hayalini kurduğunuz mekana sahip olun.</p>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">GEZİNTİ</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="/">Ana Sayfa</a>
+              </li>
+              <li>
+                <a href="/about-us">Kurumsal</a>
+              </li>
+              <li>
+                <a href="/services">Hizmetler</a>
+              </li>
+      
+              <li>
+                <a href="/gallery">Galeri</a>
+              </li>
+              <li>
+                <a href="/contact-us">İletişim</a>
+              </li>
+            </ul>
+          </li>
+          
+          
+          <li class="nav__item">
+            <h2 class="nav__title">SOSYAL MEDYA</h2>
+            
+            <ul class="nav__ul ">
+              <li>
+                <a><i class="bi bi-instagram"> Instagram</i></a>
+              </li>
+              
+              <li>
+                <a><i class="bi bi-facebook"> Facebook</i></a>
+              </li>
+              <li>
+                <a href="https://wa.me/+905324450905"><i class="bi bi-whatsapp"> Whatsapp</i></a>
+              </li>
+              
+      
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">İLETİŞİM</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="tel:+905324450905">Telefon: 0532 445 09 05</a>
+              </li>
+              
+              <li>
+                <a href="https://wa.me/+905324450905">Whatsapp: 0532 445 09 05</a>
+              </li>
+              
+             
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>2022 &copy; ARC Dekorasyon </p>
+          
+          <div class="legal__links">
+           <a href="https://tetasoftware.com" target="_blank"><img src="/media/image-default/teta-logo-2.png" alt=""></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- JS Libraries -->
+    <script src="https://kit.fontawesome.com/20583e3abd.js" crossorigin="anonymous"></script>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- jquery-2.1.3.min js -->
+    <script type="text/javascript" src='https://madsparrow.me/emily/assets/js/jquery-3.2.1.min.js'></script>
+    <!-- Vendors -->
+    <script type="text/javascript" src='https://madsparrow.me/emily/assets/js/plugins.min.js'></script>
+    <!-- Main js -->
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  </body>
+</html>
+
+<script>
+  window.sr=ScrollReveal();
+  sr.reveal(".js-left",{
+      origin: "left",
+      duration:1000,
+      distance:"25rem",
+      delay:300,
+  })
+  sr.reveal(".js-right",{
+      origin: "right",
+      duration:1000,
+      distance:"25rem",
+      delay:300,
+  })
+  sr.reveal(".js-top",{
+      origin: "bottom",
+      duration:1000,
+      distance:"1rem",
+      delay:300,
+  })
+  sr.reveal(".js-bottom",{
+      origin: "top",
+      duration:1000,
+      distance:"1rem",
+      delay:300,
+  })
+
+</script>
+
+<script>
+  $(function() {
+
+var cdSlider = $('.cd-slider'), 
+  card = cdSlider.find('.card'), 
+  cities = cdSlider.find('.cities'), 
+  numbers = cdSlider.find('.numbers'),
+  dots = cdSlider.find('.dots');
+
+card.each(function() {
+  var a = $(this).index(),
+    b = a+1;
+  numbers.children('ul').append('<li>0'+ b +'</li>');
+  dots.append('<a href="#"></a>');
+  $(this).append('<button class="close"></button>');
+});
+
+card.eq(0).addClass('current_card');
+numbers.find('li').eq(0).addClass('current_number');
+dots.find('a').eq(0).addClass('current_dot');
+cities.find('a').eq(0).addClass('current_city');
+
+cities.on('click', 'a', function(event) {
+  event.preventDefault();
+  update($(this).index());
+});
+
+dots.on('click', 'a', function(event) {
+  event.preventDefault();
+  update($(this).index());
+});
+
+card.on('click', function() {
+  $(this).addClass('open_card');
+  cdSlider.addClass('visible');
+});
+
+// close button
+card.on('click', '.close', function(e) {
+  $(".current_card").removeClass('open_card');
+  cdSlider.removeClass('visible');
+  card.scrollTop(0);
+  e.stopPropagation();
+});
+
+var update = function (indexValue) {
+  //current card
+  card.eq(indexValue).addClass('current_card').siblings().removeClass('current_card');
+  //current cities link
+  cities.find('a').eq(indexValue).addClass('current_city').siblings().removeClass('current_city');
+  //current number
+  numbers.find('li').eq(indexValue).addClass('current_number').siblings().removeClass('current_number');
+  //current dot
+  dots.find('a').eq(indexValue).addClass('current_dot').siblings().removeClass('current_dot');
+
+  // update translate value numbers
+  var translate = indexValue * 20 + 'rem';
+
+  numbers.find('ul').css({
+    '-webkit-transform': 'translateY(-' + translate + ')',
+    'transform': 'translateY(-' + translate + ')'
+  });
+
+}
+
+});
+</script>
+
+
+
+
+<script>
+class Lightbox{
+  constructor(){
+   this.init()
+  }
+
+  init(){
+   this.container = document.createElement('div');
+   this.container.id = 'lightbox';
+   document.body.appendChild(this.container);
+
+   this.lightboxImg = document.createElement('img');
+   this.container.appendChild(this.lightboxImg);
+
+   this.addListeners();
+  }
+
+  addListeners(){
+   const images = document.querySelectorAll('.gallery img');
+   images.forEach(img => {
+    img.addEventListener('click', ()=> this.galleryImgClicked(img))
+   })
+
+   this.container.addEventListener('click', ()=>{
+    this.hideLightbox()
+   })
+
+   document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') this.hideLightbox()
+   })
+  }
+
+  hideLightbox(){
+   this.container.classList.remove('active')
+  }
+
+  galleryImgClicked = (img) => {
+    this.lightboxImg.src = img.src;
+    this.container.classList.add('active')
+  }
+}
+
+const lightbox = new Lightbox()
+</script>

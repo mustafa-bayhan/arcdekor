@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARC Dekorasyon | Ankara Dekorasyon</title>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/image-default/logo.png" />
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="https://madsparrow.me/emily/assets/css/plugins.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <div class="ms-main-container">
+      <!-- Preloader -->
+      <div class="ms-preloader"></div>
+      <!-- Header -->
+      <header class="ms-header navbar-white">
+        <nav class="ms-nav">
+          <div class="ms-logo">
+            <a href="/" data-type="page-transition">
+              <div class="logo-light "><img src="/media/image-default/ARC LOGO.png" alt="logo image"></div>
+              <div class="logo-dark current"><img src="/media/image-default/ARC LLOGO 2.png" alt="logo image"></div>
+            </a>
+          </div>
+          <button class="hamburger" type="button" data-toggle="navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-label">MENÜ</span>
+            <span class="hamburger-inner"></span>
+          </span>
+          </button>
+          <div class="height-full-viewport">
+            <ul class="ms-navbar">
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/" data-type="page-transition">
+                  <span class="ms-btn">ANA SAYFA</span>
+                  <span class="nav-item__label">Ana sayfaya dön</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/about-us" data-type="page-transition">
+                  <span class="ms-btn">KURUMSAL</span>
+                  <span class="nav-item__label">Hakkımızda daha fazla</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/services" data-type="page-transition">
+                  <span class="ms-btn">HİZMETLER</span>
+                  <span class="nav-item__label">Neler yapıyoruz?</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/gallery" data-type="page-transition">
+                  <span class="ms-btn">GALERİ</span>
+                  <span class="nav-item__label">Çalışmalarımızı görüntüle</span>
+                </a>
+              </li>
+              <!-- Nav Link -->
+              <li class="nav-item">
+                <a href="/contact-us" data-type="page-transition">
+                  <span class="ms-btn">İLETİŞİM</span>
+                  <span class="nav-item__label">Hemen ulaşın</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="banner">
+        <div class="banners js-bottom">
+          <div id="verticle"></div>
+          <h2>İLETİŞİM</h2>
+        </div>
+      </section>
+     
+    <section class="contact-sec js-top">
+      <div class="contactibfo">
+        <div class="icons-tel" >
+          <div class="icons-info" style="padding-top:22px; display: block; text-align: center ;">
+            <div class="aq hideeee"><img src="/media/image-default/contact.webp"  style=" width: 100%;"alt=""></div></div>
+            <div class="backup"><img src="/media/image-default/contact 2.webp" alt=""></div>
+        </div>
+      </div>
+      <div class="contactformz" >
+        <div class="icons-info" style="padding-top:22px; display: block; text-align: center ;">
+          
+          <div class="aq"><h2 style="color: #fff;">HEMEN ULAŞIN</h2></div>
+          <div class="aq"><p>Projeniz hakkında bilgi vermek, teklif almak için hemen telefon numarasından, Whatsapp üzerinden ve iletişim formundan bize ulaşabilirsiniz. İletişim formuna bilgilerinizi bıraktığınız takdirde sizinle en kısa sürede iletişime geçilecektir.
+          </p></div>
+          <div class="aq"><a href="tel:+905324450905" style="color: #fff; font-size:22px; "><i class="bi bi-telephone"> 0532 445 09 05</i></a></div>
+          <br>
+          <div class="aq"><a href="https://wa.me/+905324450905" style="color: #fff; font-size:22px; "><i class="bi bi-whatsapp"> 0532 445 09 05</i></a></div>
+          <br>
+          <div class="aq"><a style="color: #fff; font-size:22px; "><i class="bi bi-geo-alt"> Ankara, Türkiye</i></a></div>
+
+        </div>
+        <form method="post" class="js-top"> 
+          {% csrf_token %}     
+          <input required name="name" type="text" value="{{name}}" class="feedback-input" placeholder="Adınız" />   
+          <input required  name="email" type="text" value="{{email}}" class="feedback-input" placeholder="E-posta" />
+          <input required  name="tel" type="text" value="{{tel}}" class="feedback-input" placeholder="Telefon" />
+          <textarea required  name="message" class="feedback-input" placeholder="İşinizden bahsedin">{{message}}</textarea>
+          <input required name="result" type="Number" class="feedback-input" placeholder="{{a}}+{{b}}=" />
+          <input name="a" value="{{a}}" hidden />
+          <input name="b" value="{{b}}" hidden />
+          <p style="text-align: center;">Mesajınızı göndermek için işlem sonucunu giriniz</p>
+   
+          <button type="submit">GÖNDER</button>
+        </form>
+        {% if error %}
+        <div style="text-align:center ; color: red; margin-top: -50px;">
+          {{error}}
+        </div>
+        {% endif %}
+        
+      </div>
+      
+    </section>
+
+
+      
+      <footer class="footer" style="margin-top: 130px;">
+        <div class="footer__addr">
+          <img src="/media/image-default/ARC LLOGO 2.png" alt="">
+          <p style="font-size:1.125rem;">A kalite malzemelerle ve birinci sınıf işçilikle yapılan tüm işler farkını ilk bakışta ortaya koyar. Hemen ulaşın hayalini kurduğunuz mekana sahip olun.</p>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">GEZİNTİ</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="/">Ana Sayfa</a>
+              </li>
+              <li>
+                <a href="/about-us">Kurumsal</a>
+              </li>
+              <li>
+                <a href="/services">Hizmetler</a>
+              </li>
+      
+              <li>
+                <a href="/gallery">Galeri</a>
+              </li>
+              <li>
+                <a href="/contact-us">İletişim</a>
+              </li>
+            </ul>
+          </li>
+          
+          
+          <li class="nav__item">
+            <h2 class="nav__title">SOSYAL MEDYA</h2>
+            
+            <ul class="nav__ul ">
+              <li>
+                <a><i class="bi bi-instagram"> Instagram</i></a>
+              </li>
+              
+              <li>
+                <a><i class="bi bi-facebook"> Facebook</i></a>
+              </li>
+              <li>
+                <a href="https://wa.me/+905324450905"><i class="bi bi-whatsapp"> Whatsapp</i></a>
+              </li>
+              
+      
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">İLETİŞİM</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="tel:+905324450905">Telefon: 0532 445 09 05</a>
+              </li>
+              
+              <li>
+                <a href="https://wa.me/+905324450905">Whatsapp: 0532 445 09 05</a>
+              </li>
+              
+             
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>2022 &copy; ARC Dekorasyon </p>
+          
+          <div class="legal__links">
+           <a href="https://tetasoftware.com" target="_blank"><img src="/media/image-default/teta-logo-2.png" alt=""></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- JS Libraries -->
+    <script src="https://kit.fontawesome.com/20583e3abd.js" crossorigin="anonymous"></script>
+    <!-- jquery-2.1.3.min js -->
+    <script type="text/javascript" src='https://madsparrow.me/emily/assets/js/jquery-3.2.1.min.js'></script>
+    <!-- Vendors -->
+    <script type="text/javascript" src='https://madsparrow.me/emily/assets/js/plugins.min.js'></script>
+    <!-- Main js -->
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </body>
+</html>
+
+
+<script>
+  window.sr=ScrollReveal();
+  sr.reveal(".js-left",{
+      origin: "left",
+      duration:1000,
+      distance:"15rem",
+      delay:300,
+  })
+  sr.reveal(".js-right",{
+      origin: "right",
+      duration:1000,
+      distance:"15rem",
+      delay:300,
+  })
+  sr.reveal(".js-top",{
+      origin: "bottom",
+      duration:1000,
+      distance:"1rem",
+      delay:300,
+  })
+  sr.reveal(".js-bottom",{
+      origin: "top",
+      duration:1000,
+      distance:"1rem",
+      delay:300,
+  })
+
+</script>
