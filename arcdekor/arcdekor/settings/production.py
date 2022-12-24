@@ -1,5 +1,5 @@
 
-from caqa.settings.base import *
+from arcdekor.settings.base import *
 DEBUG = False
 
 ALLOWED_HOSTS = ['arcdekorasyon.com','www.arcdekorasyon.com']
