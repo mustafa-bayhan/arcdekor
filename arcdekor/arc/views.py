@@ -48,8 +48,8 @@ def contact(request):
             make_comment.save()
             
         else:
-            a = random.randint(1,100)
-            b = random.randint(1,100)
+            a = random.randint(1,50)
+            b = random.randint(1,10)
             context['a']=a
             context['b']=b
             context['name']=request.POST.get('name')
@@ -59,8 +59,8 @@ def contact(request):
             context['error'] = 'İşlem sonucu yanlış. Lütfen sonucu doğru giriniz!'
             return render(request,'contact.html',context)
         
-    a = random.randint(1,100)
-    b = random.randint(1,100)
+    a = random.randint(1,50)
+    b = random.randint(1,10)
     context['a']=a
     context['b']=b
     return render(request,'contact.html',context)
